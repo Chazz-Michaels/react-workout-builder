@@ -17,13 +17,11 @@ class SelectAthleticGoal extends Component {
             name="athleticGoal"
             value="strength"> Strength/ Powerlifting
           </option>
-          <br />
           <option
           type="select"
           name="athleticGoal"
           value="bodybuild"> Muscle Building/ Bodybuilding
           </option>
-          <br />
           <option
           type="select"
           name="athleticGoal"
