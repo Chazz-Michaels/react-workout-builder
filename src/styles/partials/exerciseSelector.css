@@ -1,0 +1,10 @@
+select {
+  min-width: 200px;
+}
+option[value=""][disabled] {
+  display: none;
+}
+#compoundWrapper, #assistanceWrapper {
+  display: inline-block;
+  min-width: 300px;
+}

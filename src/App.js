@@ -1,26 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import NavMenu from './components/navMenu';
+import Brand from './components/brand';
+import SelectAthleticGoal from './components/selectAthleticGoal';
+import SelectWorkoutType from './components/selectWorkoutType';
+import SelectMainExercises from './components/selectMainExercises';
+import SelectAssistanceExercises from './components/selectAssistanceExercises';
+import YourWorkout from './components/yourWorkout';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <React.Fragment>
+        <div id="outer-container">
+          <NavMenu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }/>
+          <main id="page-wrap" className="main-content-wrapper">
+          <div className="center-me">
+            <Brand />
+            <SelectAthleticGoal />
+            <SelectWorkoutType />
+            <SelectMainExercises />
+            <SelectAssistanceExercises />
+            <YourWorkout />
+          </div>
+
+          </main>
+        </div>
+      </React.Fragment>
     );
   }
 }
