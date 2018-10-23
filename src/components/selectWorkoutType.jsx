@@ -6,11 +6,11 @@ class SelectWorkoutType extends Component {
     return (
       <div className="center-me">
         <select
-          onClick={''}>
-          <option disabled
+          >
+          <option
             type="select"
             value="fieldName"
-            disable selected> Select Workout Type
+            disabled="disabled" > Select Workout Type
           </option>
           <option
             type="select"

@@ -9,6 +9,7 @@ import YourWorkout from './components/yourWorkout';
 import './App.css';
 
 class App extends Component {
+
   state = {
     exerciseList: [
       {id: 1, type: "compound", mg: "legs", name: "BB Squat"},
@@ -22,34 +23,40 @@ class App extends Component {
       {id: 9, type: "assistance", mg: "chest", name: "Tricep Pushdown"},
       {id: 10, type: "assistance", mg: "back", name: "DB Bicep Curl"}
     ],
-    athleticGoal: [
-      {choice: "nothin", setsMain: 0, setsAssistance: 0, repsMain: 0, repsAssistance: 0}
-    ],
-    workoutType: [
-      {choice: "nothin"}
-    ],
-    exercisesSelected: [
-      {id: 1, type: "compound", name: "name"}
-    ]
+    athleticGoal: []
   }
+
+  handleGoalChange = (e) => {
+      this.setState({
+        athleticGoal: e
+      });
+  };
+
+
   render() {
+    const {goalIsStrength} = {goal: "strength", setsMain: 4, setsAssistance: 3, repsMain: 5, repsAssistance: 10};
+    const {goalIsBodybuilding} = {goal: "bodybuilding", setsMain: 4, setsAssistance: 4, repsMain: 8, repsAssistance: 12};
+    const {goalIsChisel} = {goal: "chisel", setsMain: 4, setsAssistance: 3, repsMain: 10, repsAssistance: 15};
+
     return (
-      <React.Fragment>
         <div id="outer-container">
           <NavMenu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }/>
           <main id="page-wrap" className="main-content-wrapper">
           <div className="center-me">
             <Brand />
-            <SelectAthleticGoal />
+            <SelectAthleticGoal
+                onAthleticGoalChange={this.handleGoalChange} />
             <SelectWorkoutType />
             <SelectMainExercises />
             <SelectAssistanceExercises />
-            <YourWorkout />
+            <YourWorkout
+              displaySetsMain={4}
+              displayRepsMain={10}
+              displayGoal={this.state.athleticGoal} />
           </div>
 
           </main>
         </div>
-      </React.Fragment>
     );
   }
 }

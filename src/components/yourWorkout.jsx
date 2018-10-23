@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 
 class YourWorkout extends Component {
 
+  calculateStuff = () => {
+    console.log("fuck");
+  }
+
+
   render() {
     return (
       <div className="center-me">
@@ -19,6 +24,12 @@ class YourWorkout extends Component {
             <td>map out</td>
             <td>exercises</td>
             <td>and stuff here</td>
+          </tr>
+          <tr>
+            <td>Ya goal is: {this.props.displayGoal}</td>
+            <td>{this.props.displaySetsMain}</td>
+            <td>{this.props.displayRepsMain}</td>
+
           </tr>
         </tbody>
         </table>

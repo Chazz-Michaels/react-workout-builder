@@ -2,32 +2,37 @@ import React, { Component } from 'react';
 
 class SelectAthleticGoal extends Component {
 
+  handleAthleticGoal = (e) => {
+    let value = e.target.value;
+    this.props.onAthleticGoalChange(value);
+  }
+
   render() {
     return (
       <div className="center-me">
         <select
-          onClick={''}>
-          <option disabled
+          onChange={this.handleAthleticGoal}>
+          <option
             type="select"
-            value="fieldName"
-            disable selected> Select Athletic Goal
+            disabled="disabled" > Select Athletic Goal
           </option>
           <option
             type="select"
-            name="athleticGoal"
+            name="strength"
             value="strength"> Strength/ Powerlifting
           </option>
           <option
-          type="select"
-          name="athleticGoal"
-          value="bodybuild"> Muscle Building/ Bodybuilding
+            type="select"
+            name="bodybuilding"
+            value="bodybuilding"> Muscle Building/ Bodybuilding
           </option>
           <option
-          type="select"
-          name="athleticGoal"
-          value="chisel"> Chisel/ Cut
+            type="select"
+            name="chisel"
+            value="chisel"> Chisel/ Cut
           </option>
         </select>
+        <div>Your athletic goal chosen is: </div>
       </div>
     );
   }
