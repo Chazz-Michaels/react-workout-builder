@@ -95,7 +95,10 @@ class App extends Component {
               selectedWorkoutType={this.state.workoutType}
               displayMainExercises={this.state.mainExerciseList}
               getMuscleGroupsFromState={this.state.mainExerciseList.mg} />
-            <SelectAssistanceExercises />
+            <SelectAssistanceExercises
+              selectedWorkoutType={this.state.workoutType}
+              displayAssistanceExercises={this.state.assistanceExerciseList}
+              getMuscleGroupsFromState={this.state.assistanceExerciseList.mg} />
             <YourWorkout
               displaySetsMain={4}
               displayRepsMain={10}
