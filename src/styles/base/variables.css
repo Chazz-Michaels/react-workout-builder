@@ -1,4 +1,11 @@
 :root {
   --fontMain: 'Bai Jamjuree', sans-serif;
   --fontBrand: 'Black Ops One', cursive;
+
+  --green: #88F40C;
+  --green2: #99F430;
+  --gray1: #EAF0FC;
+  --gray2: #8A92A3;
+  --gray3: #585D68;
+  --gray4: #24272D;
 }

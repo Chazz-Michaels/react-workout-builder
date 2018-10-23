@@ -9,7 +9,7 @@ class YourWorkout extends Component {
 
   render() {
     return (
-      <div className="center-me">
+      <div className="center-me your-workout-wrapper">
         <h2>Your Workout</h2>
         <div>Your goal: {this.props.displayGoal}</div>
         <hr />

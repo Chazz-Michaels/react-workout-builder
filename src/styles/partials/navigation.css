@@ -8,22 +8,22 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: black;
+  background: var(--green);
 }
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  background-color: black;
+  background-color: var(--gray4);
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background-color: white;
+  background-color: var(--green);
 }
 
 /* General sidebar styles */
 .bm-menu {
-  background: black;
+  background: var(--gray4);
   overflow-y: hidden !important;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
@@ -44,7 +44,7 @@
 .bm-item {
   display: inline-block;
   font-size: 1.4rem;
-  color: white;
+  color: var(--gray1);
 }
 
 /* Styling of overlay */

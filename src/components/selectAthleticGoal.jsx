@@ -10,8 +10,9 @@ class SelectAthleticGoal extends Component {
   render() {
     return (
       <div className="center-me">
-        <h5>Your athletic goal:</h5>
+        <div className="select-box-title">Your athletic goal:</div>
         <select
+          className="select-box-content"
           onChange={this.handleAthleticGoal}>
           <option
             type="select"

@@ -87,10 +87,12 @@ class App extends Component {
           <main id="page-wrap" className="main-content-wrapper">
           <div className="center-me">
             <Brand />
-            <SelectAthleticGoal
-              onAthleticGoalChange={this.handleGoalChange} />
-            <SelectWorkoutType
-              onWorkoutTypeChange={this.handleWorkoutTypeChange} />
+            <div className="selector-wrapper">
+              <SelectAthleticGoal
+                onAthleticGoalChange={this.handleGoalChange} />
+              <SelectWorkoutType
+                onWorkoutTypeChange={this.handleWorkoutTypeChange} />
+            </div>
             <SelectMainExercises
               selectedWorkoutType={this.state.workoutType}
               displayMainExercises={this.state.mainExerciseList}
