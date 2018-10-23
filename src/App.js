@@ -54,7 +54,10 @@ class App extends Component {
               onAthleticGoalChange={this.handleGoalChange} />
             <SelectWorkoutType
               onWorkoutTypeChange={this.handleWorkoutTypeChange} />
-            <SelectMainExercises />
+            <SelectMainExercises
+              selectedWorkoutType={this.state.workoutType}
+              displayGivenMainExercises={this.state.exerciseList}
+              getMuscleGroupsFromState={this.state.exerciseList.mg} />
             <SelectAssistanceExercises />
             <YourWorkout
               displaySetsMain={4}
