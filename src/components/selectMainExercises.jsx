@@ -6,23 +6,22 @@ class SelectMainExercises extends Component {
     return (
       <div className="">
         <h2>Choose Main Exercises</h2>
-        <h5>Recommendation: choose 1-3 main exercises from this list.</h5>
+        <h5>Recommendation: choose 1-2 main exercises from this list.</h5>
         <div>
           Since you chose a {this.props.selectedWorkoutType} workout, you may
           choose from these exercises:
         </div>
         <hr />
-
-        Map Array of Exercises as checkbox options to choose from here.
         <ul>
           {this.props.displayMainExercises.filter(exList => exList.mg === this.props.selectedWorkoutType || this.props.selectedWorkoutType === 'totalBody').map(exercise =>{
             return <React.Fragment key={Math.random()}>
-                   <li key={exercise.id}>
-                      muscle group: {exercise.mg}
-                      <br />
-                      exercise: {exercise.name}
-                   </li>
-                   <hr />
+                   <button
+                     className="exercise-select-button"
+                     key={exercise.id} >
+                       <span className="exercise-title-on-button">{exercise.name}</span>
+                       <hr className="button-hr"/>
+                       <span className="label-on-button">muscle group: </span><span className="muscle-group-on-button">{exercise.mg}</span>
+                   </button>
                    </React.Fragment>;
           })}
         </ul>

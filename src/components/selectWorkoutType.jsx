@@ -10,12 +10,14 @@ class SelectWorkoutType extends Component {
   render() {
     return (
       <div className="center-me">
+        <h5>Your workout for today:</h5>
         <select
           onChange={this.handleWorkoutType}>
           <option
             type="select"
             value="fieldName"
-            disabled="disabled" > Select Workout Type
+            disabled="disabled"
+            selected > Select Workout Type
           </option>
           <option
             type="select"

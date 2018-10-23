@@ -1,7 +1,10 @@
 .main-content-wrapper {
-  /*height: 100vh;*/
+  min-height: 100vh;
   background-color: lightgray;
 }
 .center-me {
   text-align: center;
+}
+body {
+  font-family: var(--fontMain);
 }
