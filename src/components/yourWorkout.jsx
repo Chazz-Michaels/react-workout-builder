@@ -11,6 +11,8 @@ class YourWorkout extends Component {
     return (
       <div className="center-me">
         <h2>Your Workout</h2>
+        <div>Your goal: {this.props.displayGoal}</div>
+        <div>Your workout type: {this.props.displayWorkoutType}</div>
         <table id="your-workout-table" className="center-me">
         <thead>
           <tr>

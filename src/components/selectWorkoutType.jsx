@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 
 class SelectWorkoutType extends Component {
 
+  handleWorkoutType = (e) => {
+    let value = e.target.value;
+    this.props.onWorkoutTypeChange(value);
+  }
+
   render() {
     return (
       <div className="center-me">
         <select
-          >
+          onChange={this.handleWorkoutType}>
           <option
             type="select"
             value="fieldName"
@@ -14,28 +19,23 @@ class SelectWorkoutType extends Component {
           </option>
           <option
             type="select"
-            name="workoutType"
             value="back"> Back
           </option>
           <option
-          type="select"
-          name="workoutType"
-          value="legs"> Legs
+            type="select"
+            value="legs"> Legs
           </option>
           <option
-          type="select"
-          name="workoutType"
-          value="chest"> Chest
+            type="select"
+            value="chest"> Chest
           </option>
           <option
-          type="select"
-          name="workoutType"
-          value="shoulders"> Shoulders
+            type="select"
+            value="shoulders"> Shoulders
           </option>
           <option
-          type="select"
-          name="workoutType"
-          value="totalBody"> Total Body
+            type="select"
+            value="totalBody"> Total Body
           </option>
         </select>
       </div>

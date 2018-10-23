@@ -32,7 +32,6 @@ class SelectAthleticGoal extends Component {
             value="chisel"> Chisel/ Cut
           </option>
         </select>
-        <div>Your athletic goal chosen is: </div>
       </div>
     );
   }

@@ -23,7 +23,8 @@ class App extends Component {
       {id: 9, type: "assistance", mg: "chest", name: "Tricep Pushdown"},
       {id: 10, type: "assistance", mg: "back", name: "DB Bicep Curl"}
     ],
-    athleticGoal: []
+    athleticGoal: [],
+    workoutType: []
   }
 
   handleGoalChange = (e) => {
@@ -32,6 +33,11 @@ class App extends Component {
       });
   };
 
+  handleWorkoutTypeChange = (e) => {
+      this.setState({
+        workoutType: e
+      });
+  };
 
   render() {
     const {goalIsStrength} = {goal: "strength", setsMain: 4, setsAssistance: 3, repsMain: 5, repsAssistance: 10};
@@ -45,14 +51,16 @@ class App extends Component {
           <div className="center-me">
             <Brand />
             <SelectAthleticGoal
-                onAthleticGoalChange={this.handleGoalChange} />
-            <SelectWorkoutType />
+              onAthleticGoalChange={this.handleGoalChange} />
+            <SelectWorkoutType
+              onWorkoutTypeChange={this.handleWorkoutTypeChange} />
             <SelectMainExercises />
             <SelectAssistanceExercises />
             <YourWorkout
               displaySetsMain={4}
               displayRepsMain={10}
-              displayGoal={this.state.athleticGoal} />
+              displayGoal={this.state.athleticGoal}
+              displayWorkoutType={this.state.workoutType} />
           </div>
 
           </main>
