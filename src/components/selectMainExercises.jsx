@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class SelectMainExercises extends Component {
 
   render() {
-    let selwortyp = this.props.selectWorkoutType;
     return (
       <div className="">
         <h2>Choose Main Exercises</h2>
@@ -16,12 +15,12 @@ class SelectMainExercises extends Component {
 
         Map Array of Exercises as checkbox options to choose from here.
         <ul>
-          {this.props.displayGivenMainExercises.filter(d => this.props.selectedWorkoutType === d.mg).map(function(x){
+          {this.props.displayMainExercises.filter(exList => exList.mg === this.props.selectedWorkoutType || this.props.selectedWorkoutType === 'totalBody').map(exercise =>{
             return <React.Fragment key={Math.random()}>
-                   <li key={x.id}>
-                      muscle group: {x.mg}
+                   <li key={exercise.id}>
+                      muscle group: {exercise.mg}
                       <br />
-                      exercise: {x.name}
+                      exercise: {exercise.name}
                    </li>
                    <hr />
                    </React.Fragment>;
