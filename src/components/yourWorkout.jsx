@@ -33,7 +33,11 @@ class YourWorkout extends Component {
             <td>Ya goal is: {this.props.displayGoal}</td>
             <td>{this.props.displaySetsMain}</td>
             <td>{this.props.displayRepsMain}</td>
-
+          </tr>
+          <tr>
+            <td>{this.props.displayClickedMainExercises}</td>
+            <td>{this.props.displaySetsMain}</td>
+            <td>{this.props.displayRepsMain}</td>
           </tr>
         </tbody>
         </table>

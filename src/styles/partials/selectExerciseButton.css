@@ -19,3 +19,6 @@
 .button-hr {
   margin: 0;
 }
+.exercise-select-button:hover {
+  cursor: pointer;
+}

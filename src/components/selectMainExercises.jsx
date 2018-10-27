@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 
 class SelectMainExercises extends Component {
 
+  handleClickedMainExercise = (e) => {
+    e.preventDefault();
+    let name = e.target.name;
+    //console.log("id: " + id + ". selected: " + selected);
+    console.log("main exercise clicked: " + name);
+    this.props.onClickedMainExercise(name);
+  };
+
   render() {
     return (
       <div className="main-exercises-wrapper">
@@ -12,9 +20,10 @@ class SelectMainExercises extends Component {
           {this.props.displayMainExercises.filter(exList => exList.mg === this.props.selectedWorkoutType || this.props.selectedWorkoutType === 'totalBody').map(exercise =>{
             return <React.Fragment key={Math.random()}>
                    <button
-                     className="exercise-select-button"
-                     key={exercise.id} >
-                       <span className="exercise-title-on-button">{exercise.name}</span>
+                     onClick={this.handleClickedMainExercise}
+                     className="exercise-select-button exercise-title-on-button"
+                     key={exercise.id}
+                     name={exercise.name}>{exercise.name}
                        <hr className="button-hr"/>
                        <span className="label-on-button">muscle group: </span><span className="muscle-group-on-button">{exercise.mg}</span>
                    </button>
