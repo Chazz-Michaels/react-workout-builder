@@ -70,28 +70,6 @@ class App extends Component {
     assistanceReps: []
   }
 
-/*  handleGoalChange = (e) => {
-    let sm = 99;
-    let rm = 99;
-    let sa = 99;
-    let ra = 99;
-    if(e === "strength"){
-      sm = 4; rm = 5; sa = 3; ra = 10;
-    };
-    if(e === "bodybuilding"){
-      sm = 4; rm = 8; sa = 4; ra = 12;
-    };
-    if(e === "chisel"){
-      sm = 4; rm = 10; sa = 3; ra = 15;
-    };
-    this.setState({
-      athleticGoal: [
-        {namo: e, setsMain: sm, repsMain: rm, setsAssistance: sa, repsAssistance: ra}
-      ]
-    });
-    console.log(this.state.athleticGoal);
-  };*/
-
   handleGoalChange = (e) => {
       this.setState({
         athleticGoal: e
@@ -162,10 +140,6 @@ class App extends Component {
 
 
   render() {
-    //const {goalIsStrength} = {goal: "strength", setsMain: 4, setsAssistance: 3, repsMain: 5, repsAssistance: 10};
-    //const {goalIsBodybuilding} = {goal: "bodybuilding", setsMain: 4, setsAssistance: 4, repsMain: 8, repsAssistance: 12};
-    //const {goalIsChisel} = {goal: "chisel", setsMain: 4, setsAssistance: 3, repsMain: 10, repsAssistance: 15};
-
     return (
         <div id="outer-container">
           <NavMenu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }/>
