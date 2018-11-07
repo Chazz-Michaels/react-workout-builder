@@ -1,9 +1,23 @@
 #brand {
   font-family: var(--fontBrand);
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-align: center;
   padding: 0.8rem 0 0 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
   background-color: var(--gray4);
   color: var(--green);
+}
+#by-chasefit {
+  font-family: var(--fontMain);
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.4rem 0;
+  margin: 0.4rem 0 1rem 0;
+  background-color: var(--gray4);
+  color: var(--green);
+}
+.brand-divider {
+  border-bottom: 4px solid var(--green);
+  width: 35vw;
+  margin: auto;
 }

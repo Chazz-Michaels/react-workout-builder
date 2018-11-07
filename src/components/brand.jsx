@@ -4,7 +4,11 @@ class Brand extends Component {
 
   render() {
     return (
-      <div id="brand">WORKOUT BUILDER</div>
+      <React.Fragment>
+        <div id="brand">YOUR WORKOUT BUILDER</div>
+        <div className="brand-divider"></div>
+        <div id="by-chasefit">An app by ChaseFit</div>
+      </React.Fragment>
     );
   }
 

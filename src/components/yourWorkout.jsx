@@ -5,11 +5,18 @@ class YourWorkout extends Component {
   render() {
     return (
       <div className="center-me your-workout-wrapper">
-        <h2>Your Workout</h2>
-        <div>Your goal: {this.props.displayGoal}</div>
-        <hr />
-        <div>Your workout type: {this.props.displayWorkoutType}</div>
-        <hr />
+        <h1>Your Workout</h1>
+        <div className="short-hr-divider"></div>
+        <br />
+        <div className="your-workout-subheader-wrapper">
+          <div>Your goal: <span className="heavy">{this.props.displayGoal}</span></div>
+          <div className="shorter-hr-divider p-2"></div>
+          <br />
+          <div>Your workout type: <span className="heavy">{this.props.displayWorkoutType}</span></div>
+          <div className="shorter-hr-divider p-2"></div>
+          <br />
+        </div>
+        <br />
         <table id="your-workout-table" className="center-me">
         <thead>
           <tr>
@@ -29,9 +36,9 @@ class YourWorkout extends Component {
             })}
           </React.Fragment>
           <tr>
-            <td><hr /></td>
-            <td><hr /></td>
-            <td><hr /></td>
+            <td className="your-workout-divider"></td>
+            <td className="your-workout-divider"></td>
+            <td className="your-workout-divider"></td>
           </tr>
           <React.Fragment>
             {this.props.displayClickedAssistanceExercises.map(exercise => {

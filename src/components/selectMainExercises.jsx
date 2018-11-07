@@ -12,8 +12,9 @@ class SelectMainExercises extends Component {
   render() {
     return (
       <div className="main-exercises-wrapper">
-        <h2>Choose Main Exercises</h2>
-        <h5>Recommendation: choose 1-2 main exercises from this list.</h5>
+        <h1>Choose Main Exercises</h1>
+        <div className="short-hr-divider"></div>
+        <h4>Recommendation: choose 1-2 exercises from this list.</h4>
         <hr />
         <ul>
           {this.props.displayMainExercises.filter(exList => exList.mg === this.props.selectedWorkoutType || this.props.selectedWorkoutType === 'Total Body').map(exercise =>{

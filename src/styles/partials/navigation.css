@@ -1,9 +1,21 @@
+.adjust-page-margin-for-burger-button {
+  margin: -8vw;
+}
 .bm-burger-button {
   position: fixed;
-  width: 36px;
+  width: 46px;
   height: 30px;
   left: 36px;
-  top: 36px;
+  top: 46px;
+}
+.bg-behind-burger-button {
+  background-color: var(--gray4);
+  height: 8vw;
+  width: 8vw;
+  position: sticky;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 80% 0;
 }
 
 /* Color/shape of burger icon bars */

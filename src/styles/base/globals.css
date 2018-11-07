@@ -6,7 +6,21 @@
 .center-me {
   text-align: center;
 }
+.short-hr-divider {
+  border-bottom: 2px solid var(--gray1);
+  width: 20vw;
+  margin: auto;
+}
+.shorter-hr-divider {
+  border-bottom: 1px solid var(--gray1);
+  width: 10vw;
+  margin: auto;
+}
+.heavy {
+  font-weight: 700;
+}
 body {
+  margin-top: -8vw;
   font-family: var(--fontMain);
   background-color: var(--gray3);
   color: darker(var(--gray4), 25%);

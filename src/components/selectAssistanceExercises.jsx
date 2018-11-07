@@ -12,8 +12,9 @@ class SelectAssistanceExercises extends Component {
   render() {
     return (
       <div className="assistance-exercises-wrapper">
-        <h2>Choose Assistance Exercises</h2>
-        <h5>Recommendation: choose 3-5 assistance exercises from this list.</h5>
+        <h1>Choose Assistance Exercises</h1>
+        <div className="short-hr-divider"></div>
+        <h4>Recommendation: choose 3-5 exercises from this list.</h4>
         <hr />
         <ul>
           {this.props.displayAssistanceExercises.filter(exList => exList.mg === this.props.selectedWorkoutType || this.props.selectedWorkoutType === 'Total Body').map(exercise =>{
