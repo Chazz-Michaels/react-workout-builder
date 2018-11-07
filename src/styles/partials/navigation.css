@@ -10,8 +10,8 @@
 }
 .bg-behind-burger-button {
   background-color: var(--gray4);
-  height: 8vw;
-  width: 8vw;
+  height: 140px;
+  width: 140px;
   position: sticky;
   top: 0;
   left: 0;
