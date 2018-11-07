@@ -5,6 +5,10 @@ class SelectAthleticGoal extends Component {
   handleAthleticGoal = (e) => {
     let value = e.target.value;
     this.props.onAthleticGoalChange(value);
+    this.props.toGetMainSets(value);
+    this.props.toGetMainReps(value);
+    this.props.toGetAssistanceSets(value);
+    this.props.toGetAssistanceReps(value);
   }
 
   render() {
@@ -22,17 +26,17 @@ class SelectAthleticGoal extends Component {
           <option
             type="select"
             name="strength"
-            value="strength"> Strength/ Powerlifting
+            value="Strength/ Powerlifting"> Strength/ Powerlifting
           </option>
           <option
             type="select"
             name="bodybuilding"
-            value="bodybuilding"> Muscle Building/ Bodybuilding
+            value="Muscle Building/ Bodybuilding"> Muscle Building/ Bodybuilding
           </option>
           <option
             type="select"
             name="chisel"
-            value="chisel"> Chisel/ Cut
+            value="Chisel/ Cut"> Chisel/ Cut
           </option>
         </select>
       </div>

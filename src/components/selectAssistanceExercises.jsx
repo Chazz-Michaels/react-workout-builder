@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 
 class SelectAssistanceExercises extends Component {
 
+  handleClickedAssistanceExercise = (e) => {
+    e.preventDefault();
+    let name = e.target.name;
+    //console.log("main exercise clicked: " + name);
+    this.props.onClickedAssistanceExercise(name);
+  };
+
   render() {
     return (
       <div className="assistance-exercises-wrapper">
@@ -9,15 +16,18 @@ class SelectAssistanceExercises extends Component {
         <h5>Recommendation: choose 3-5 assistance exercises from this list.</h5>
         <hr />
         <ul>
-          {this.props.displayAssistanceExercises.filter(exList => exList.mg === this.props.selectedWorkoutType || this.props.selectedWorkoutType === 'totalBody').map(exercise =>{
+          {this.props.displayAssistanceExercises.filter(exList => exList.mg === this.props.selectedWorkoutType || this.props.selectedWorkoutType === 'Total Body').map(exercise =>{
              return <React.Fragment key={Math.random()}>
-                    <button
-                      className="exercise-select-button"
-                      key={exercise.id} >
-                        <span className="exercise-title-on-button">{exercise.name}</span>
-                        <hr className="button-hr"/>
-                        <span className="label-on-button">muscle group: </span><span className="muscle-group-on-button">{exercise.mg}</span>
-                    </button>
+                     <div className="exercise-button-wrapper">
+                       <button
+                         onClick={this.handleClickedAssistanceExercise}
+                         className="exercise-select-button exercise-title-on-button"
+                         key={exercise.id}
+                         name={exercise.name}>{exercise.name}
+                       </button>
+                       <hr className="button-hr"/>
+                       <span className="label-on-button">muscle group: </span><span className="muscle-group-on-button">{exercise.mg}</span>
+                     </div>
                     </React.Fragment>;
           })}
         </ul>

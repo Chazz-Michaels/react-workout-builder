@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 
 class YourWorkout extends Component {
 
-  calculateStuff = () => {
-    console.log("fuck");
-  }
-
-
   render() {
     return (
       <div className="center-me your-workout-wrapper">
@@ -24,21 +19,29 @@ class YourWorkout extends Component {
           </tr>
         </thead>
         <tbody>
+          <React.Fragment>
+            {this.props.displayClickedMainExercises.map(exercise => {
+              return <tr key={Math.random()}>
+                        <td>{exercise}</td>
+                        <td>{this.props.displaySetsMain}</td>
+                        <td>{this.props.displayRepsMain}</td>
+                    </tr>;
+            })}
+          </React.Fragment>
           <tr>
-            <td>map out</td>
-            <td>exercises</td>
-            <td>and stuff here</td>
+            <td><hr /></td>
+            <td><hr /></td>
+            <td><hr /></td>
           </tr>
-          <tr>
-            <td>Ya goal is: {this.props.displayGoal}</td>
-            <td>{this.props.displaySetsMain}</td>
-            <td>{this.props.displayRepsMain}</td>
-          </tr>
-          <tr>
-            <td>{this.props.displayClickedMainExercises}</td>
-            <td>{this.props.displaySetsMain}</td>
-            <td>{this.props.displayRepsMain}</td>
-          </tr>
+          <React.Fragment>
+            {this.props.displayClickedAssistanceExercises.map(exercise => {
+              return <tr key={Math.random()}>
+                        <td>{exercise}</td>
+                        <td>{this.props.displaySetsAssistance}</td>
+                        <td>{this.props.displayRepsAssistance}</td>
+                    </tr>;
+            })}
+          </React.Fragment>
         </tbody>
         </table>
       </div>

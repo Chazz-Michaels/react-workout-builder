@@ -22,23 +22,23 @@ class SelectWorkoutType extends Component {
           </option>
           <option
             type="select"
-            value="back"> Back
+            value="Back"> Back
           </option>
           <option
             type="select"
-            value="legs"> Legs
+            value="Legs"> Legs
           </option>
           <option
             type="select"
-            value="chest"> Chest
+            value="Chest"> Chest
           </option>
           <option
             type="select"
-            value="shoulders"> Shoulders
+            value="Shoulders"> Shoulders
           </option>
           <option
             type="select"
-            value="totalBody"> Total Body
+            value="Total Body"> Total Body
           </option>
         </select>
       </div>
