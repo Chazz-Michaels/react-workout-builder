@@ -84,19 +84,35 @@ class App extends Component {
   };
 
   handleClickedMainExercise = (e) => {
-    console.log(e + " should be added");
-    if(e === undefined){return}
-    this.setState({
-      selectedMainExercises: [ ...this.state.selectedMainExercises, e ]
-    });
+    //console.log(e + " should be added");
+    let alreadyAdded = false;
+    for(let i=0; i < this.state.selectedMainExercises.length; i++){
+      if(e === this.state.selectedMainExercises[i]){
+        console.log('already added this fool!');
+        alreadyAdded = true;
+      }
+    }
+    if(alreadyAdded === false){
+      this.setState({
+        selectedMainExercises: [ ...this.state.selectedMainExercises, e ]
+      });
+    }
   };
 
   handleClickedAssistanceExercise = (e) => {
     console.log(e + " should be added");
-    if(e === undefined){return}
-    this.setState({
-      selectedAssistanceExercises: [ ...this.state.selectedAssistanceExercises, e ]
-    });
+    let alreadyAdded = false;
+    for(let i=0; i < this.state.selectedAssistanceExercises.length; i++){
+      if(e === this.state.selectedAssistanceExercises[i]){
+        console.log('already added this fool!');
+        alreadyAdded = true;
+      }
+    }
+    if(alreadyAdded === false){
+      this.setState({
+        selectedAssistanceExercises: [ ...this.state.selectedAssistanceExercises, e ]
+      });
+    }
   };
 
   figureMainSets = (e) => {
@@ -138,6 +154,38 @@ class App extends Component {
     });
   };
 
+  handleClickedToRemoveExercise = (e) => {
+    let removeThisEx = e;
+    if(this.state.selectedMainExercises.includes(removeThisEx)){
+      for(let i=0; i < this.state.selectedMainExercises.length; i++){
+        if(removeThisEx === this.state.selectedMainExercises[i]){
+          let oldState = this.state.selectedMainExercises;
+          let changeState = oldState.filter(function(ex, i){
+            return ex !== removeThisEx;
+          });
+          console.log(changeState);
+          this.setState({
+            selectedMainExercises: changeState
+          });
+        }
+      }
+    }
+    if(this.state.selectedAssistanceExercises.includes(removeThisEx)){
+      for(let i=0; i < this.state.selectedAssistanceExercises.length; i++){
+        if(removeThisEx === this.state.selectedAssistanceExercises[i]){
+          let oldState = this.state.selectedAssistanceExercises;
+          let changeState = oldState.filter(function(ex, i){
+            return ex !== removeThisEx;
+          });
+          console.log(changeState);
+          this.setState({
+            selectedAssistanceExercises: changeState
+          });
+        }
+      }
+    }
+  };
+
 
   render() {
     return (
@@ -174,7 +222,8 @@ class App extends Component {
               displaySetsMain={this.state.mainSets}
               displayRepsMain={this.state.mainReps}
               displaySetsAssistance={this.state.assistanceSets}
-              displayRepsAssistance={this.state.assistanceReps} />
+              displayRepsAssistance={this.state.assistanceReps}
+              onClickToRemoveExercise={this.handleClickedToRemoveExercise} />
           </div>
 
           </main>

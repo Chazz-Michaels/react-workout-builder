@@ -20,6 +20,28 @@
   border: 2px solid var(--gray2);
   border-radius: 5px;
 }
+.adj-center-for-remove-button:before {
+  color: var(--gray4);
+  display: inline-block;
+  content: 'X';
+  margin: 0.4rem;
+}
+.remove-exercise-button {
+  background-color: var(--gray4);
+  color: var(--gray1);
+  float: left;
+  padding: 0.2rem 0.4rem;
+  border-radius: 15%;
+  border: 1px solid var(--gray2);
+}
+  .remove-exercise-button:hover {
+    cursor: pointer;
+    background-color: magenta;
+  }
+.each-execise-name {
+  display: inline-block;
+  padding: 0.2rem 0;
+}
 #your-workout-table {
   border: 4px solid var(--green);
   margin: auto;
@@ -32,7 +54,7 @@ table th {
 }
 table td {
     border-left: 1px solid var(--gray2);
-    padding: 0.5rem 0 0 0;
+    padding: 0.7rem 0 -0.2rem 0;
 }
 
 table td:first-child {
